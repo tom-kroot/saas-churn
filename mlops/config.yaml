@@ -1,0 +1,10 @@
+costs:
+  discount_rate: 0.1
+  retention_offer_cost: 500.0
+  retention_success_uplift: 0.35
+policy:
+  top_k_percent: 10
+split:
+  test_quarter: 7
+  train_end_quarter: 5
+  valid_quarter: 6
