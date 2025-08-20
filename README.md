@@ -1,4 +1,4 @@
-# SaaS Churn Prediction 🚀
+# SaaS Churn Prediction 
 
 An end-to-end data analytics + machine learning project simulating a SaaS business.  
 It predicts which customers are most likely to churn next quarter, explains the drivers, and quantifies the revenue at risk.  
