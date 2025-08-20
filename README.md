@@ -1,54 +1,64 @@
-# SaaS Churn Prediction (Portfolio-Ready Project)
+# SaaS Churn Prediction 🚀
 
-An end-to-end ML project that simulates a SaaS business and predicts next-quarter churn at the account level, quantifies revenue at risk, and exposes results via a Streamlit app.
+An end-to-end data analytics + machine learning project simulating a SaaS business.  
+It predicts which customers are most likely to churn next quarter, explains the drivers, and quantifies the revenue at risk.  
+This project is designed to demonstrate **finance + analytics skills** and is built to be portfolio-ready.
 
-## Tech Stack
-- Python, pandas, scikit-learn, XGBoost, SHAP
-- Streamlit (dashboard)
-- pytest (tests), GitHub Actions (CI)
+---
 
-## Quickstart
-```bash
-# 1) create & activate a venv (recommended)
-python -m venv .venv && source .venv/bin/activate
+## 📊 Project Overview
+- **Business Context**: In SaaS investing and operations, predicting churn is critical for revenue forecasting and retention strategies.  
+- **Goal**: Build a machine learning pipeline that:
+  - Generates synthetic SaaS customer data (customers, subscriptions, invoices, logins, tickets)
+  - Engineers features like tenure, usage, late payments, support tickets
+  - Trains classification models (Logistic Regression, XGBoost)
+  - Evaluates performance with ROC-AUC, PR-AUC, calibration, and expected business value
+  - Exposes results in a **Streamlit dashboard** for easy interpretation
 
-# 2) install deps
-pip install -r requirements.txt
+---
 
-# 3) generate synthetic data, build features, train, and evaluate
-make quickstart
+## 🛠️ Tech Stack
+- **Data & Modeling**: Python, pandas, scikit-learn, XGBoost, SHAP
+- **App**: Streamlit (interactive dashboard)
+- **Testing & CI**: pytest, GitHub Actions
+- **Infra**: Docker, Makefile for reproducibility
 
-# 4) launch the app
-make app
-```
+---
 
-## Project Layout
-```
-project/
-├─ app/                         # Streamlit app
-├─ data/                        # raw/processed (gitignored; tiny demo included)
-├─ mlops/                       # pipeline configs
-├─ notebooks/                   # EDA + modeling
-├─ src/
-│  ├─ features/                 # feature builders
-│  ├─ models/                   # training/inference
-│  └─ utils/                    # helpers
-├─ tests/                       # unit tests
+## 📂 Repo Layout
+
+saas_churn_project/
+├─ app/ # Streamlit dashboard
+├─ data/ # raw/processed (gitignored)
+├─ mlops/ # pipeline configs
+├─ src/ # feature engineering + models
+├─ tests/ # unit tests
+├─ notebooks/ # exploratory analysis
 ├─ Dockerfile
 ├─ Makefile
 ├─ requirements.txt
-├─ model_card.md
-└─ .github/workflows/ci.yml
-```
+└─ model_card.md # assumptions & limitations
 
-## Business Framing
-We optimize for **precision-recall** under class imbalance and report **expected value** of retention offers. The cost matrix and revenue-at-risk assumptions are configurable in `mlops/config.yaml`.
 
-## Talking Points
-- Time-based train/test split to avoid target leakage.
-- PR-AUC and calibration for decisioning.
-- SHAP for feature importance; verified via ablations.
-- Intervention policy: target top-k% risk until budget is exhausted.
 
-## License
-MIT
+---
+
+## 🚀 Quickstart
+```bash
+# clone this repo
+git clone https://github.com/tom-kroot/saas-churn.git
+cd saas-churn
+
+# create virtual env
+python3 -m venv .venv
+source .venv/bin/activate
+
+# install deps
+pip install -r requirements.txt
+
+# generate data, train models, evaluate
+make quickstart
+
+# launch dashboard
+make app
+
