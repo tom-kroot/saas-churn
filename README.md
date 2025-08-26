@@ -2,7 +2,6 @@
 
 An end-to-end data analytics + machine learning project simulating a SaaS business.  
 It predicts which customers are most likely to churn next quarter, explains the drivers, and quantifies the revenue at risk.  
-This project is designed to demonstrate **finance + analytics skills** and is built to be portfolio-ready.
 
 ---
 
